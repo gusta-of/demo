@@ -12,6 +12,7 @@ export class AuthService {
   constructor(private fireAuth: AngularFireAuth) {
 
     this.fireAuth.authState.subscribe(user => {
+
       this.user = user;
     })
 
@@ -19,7 +20,7 @@ export class AuthService {
 
   async loginWithGoogle() {
     await this.fireAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(res => {
-      console.log('Login Successful', this.user);
+      console.log('Login Successfull', this.user);
     }).catch(err => {
       console.log('Error while sign in', err);
     });

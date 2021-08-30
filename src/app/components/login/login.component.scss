@@ -1,0 +1,41 @@
+#loginProvider {
+  background: rgba($color: #ffffff, $alpha: 1.0);
+  border: none;
+  height: 60px;
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, .4);
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: ease-in-out .2s;
+}
+
+#loginProvider:hover {
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, .4);
+}
+
+.title {
+  margin-left: 10px;
+}
+
+p {
+  color: #000;
+  font-size: 12px;
+  margin: 0;
+}
+
+.popup {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 80px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, .4);
+  border-radius: 20px;
+  padding: 10px;
+  top: 20px;
+  right: 5px;
+  background: rgba(255, 238, 0, .4);
+  font-weight: bold;
+}
