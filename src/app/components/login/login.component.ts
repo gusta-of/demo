@@ -11,6 +11,8 @@ import { NotificationService } from "../../data-access/rest/notification.service
 export class LoginComponent implements OnInit {
 
   constructor(private authService:AuthService) {
+
+    debugger
     this.authService.logoff();
   }
 

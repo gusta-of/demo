@@ -12,6 +12,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { GlobalModule } from "./global/global.module";
 
 import { LoginModule } from './components/login/login.module';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { LoginModule } from './components/login/login.module';
     HomePageComponent
   ],
   imports: [
+    BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     AppRoutingModule,
