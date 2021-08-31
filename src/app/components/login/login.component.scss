@@ -1,3 +1,14 @@
+.sec-login {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../../../assets/images/capa.jpg');
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 #loginProvider {
   background: rgba($color: #ffffff, $alpha: 1.0);
   border: none;
@@ -13,6 +24,7 @@
 
 #loginProvider:hover {
   box-shadow: 1px 3px 6px rgba(0, 0, 0, .4);
+  background: rgba(255, 255, 255, .7);
 }
 
 .title {
@@ -20,7 +32,7 @@
 }
 
 p {
-  color: #000;
+  color: #fff;
   font-size: 12px;
   margin: 0;
 }
@@ -36,6 +48,11 @@ p {
   padding: 10px;
   top: 20px;
   right: 10px;
-  background: rgba(255, 238, 0, .4);
+  // background: rgba(255, 238, 0, .4);
   font-weight: bold;
+}
+
+.popup:hover {
+  cursor: pointer;
+  background:rgba(0, 0, 0, .4);
 }

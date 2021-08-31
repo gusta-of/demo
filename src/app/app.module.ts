@@ -9,6 +9,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { HomePageComponent } from './home-page/home-page.component';
 
+import { GlobalModule } from "./global/global.module";
+
 import { LoginModule } from './components/login/login.module';
 
 @NgModule({
@@ -23,6 +25,7 @@ import { LoginModule } from './components/login/login.module';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     LoginModule,
+    GlobalModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

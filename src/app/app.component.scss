@@ -11,6 +11,21 @@
   transition: ease .2s;
 }
 
+.potho {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
 #logon:hover {
   box-shadow: 1px 3px 6px rgba(0, 0, 0, .4);
+}
+
+.height-100 {
+  min-height: 100vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

@@ -1,5 +1,9 @@
 <div class="container center">
 
-  <button id="logon" *ngIf="this.isAuthenticated" (click)="logoff()">logoff</button>
+  <!-- <button id="logon" *ngIf="this.isAuthenticated" (click)="logoff()">logoff</button> -->
+
+  <img [src]="user.photoURL" alt="hugenerd" class="potho">
+
   <router-outlet></router-outlet>
+
 </div>

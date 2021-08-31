@@ -12,16 +12,28 @@ export class AppComponent {
   title = 'demo';
 
   isAuthenticated: boolean;
+  user: any;
   @Input() verificaAutenticacao;
 
   constructor(
     private authService: AuthService,
     private router: Router,
   ) {
+
+    if(localStorage.getItem('user')) {
+      this.user = JSON.parse(localStorage.getItem('user'));
+    }
+
     NotificationService.event('logoff').subscribe(data => {
       this.isAuthenticated = data
 
-      if (!data) this.router.navigate(['login']);
+      if (!data) {
+        this.router.navigate(['login']);
+        return
+      }
+
+      this.user = JSON.parse(localStorage.getItem('user'));
+
     });
   }
 
