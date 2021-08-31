@@ -3,6 +3,8 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginComponent } from './components/login/login.component';
 
+import { AuthGuard } from "./data-access/rest/guard";
+
 
 const routes: Routes = [
   {
@@ -12,7 +14,8 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomePageComponent
+    component: HomePageComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'login',
@@ -28,6 +31,9 @@ const routes: Routes = [
  **/
 @NgModule({
   imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
+  providers: [
+    AuthGuard,
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/shared/auth.service';
+import { Component, OnInit } from "@angular/core";
+import { AuthService } from "src/app/shared/auth.service";
+
+import { NotificationService } from "../../data-access/rest/notification.service";
 
 @Component({
   selector: 'app-login',
@@ -8,7 +10,9 @@ import { AuthService } from 'src/app/shared/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private authService:AuthService) { }
+  constructor(private authService:AuthService) {
+    this.authService.logoff();
+  }
 
   ngOnInit(): void {}
   loginWithGoogle() {

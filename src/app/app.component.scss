@@ -1,0 +1,16 @@
+#logon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  width: 80px;
+  height: 40px;
+  background: #fff;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, .4);
+  border-radius: 20px;
+  transition: ease .2s;
+}
+
+#logon:hover {
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, .4);
+}

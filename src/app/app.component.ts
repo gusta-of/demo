@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { AuthService } from './shared/auth.service';
+import { NotificationService } from './data-access/rest/notification.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +10,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'demo';
-  constructor() {}
+
+  isAuthenticated: boolean;
+  @Input() verificaAutenticacao;
+
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+  ) {
+    NotificationService.event('logoff').subscribe(data => {
+      this.isAuthenticated = data
+
+      if (!data) this.router.navigate(['login']);
+    });
+  }
+
+  logoff() {
+    this.authService.logoff();
+  }
 }
